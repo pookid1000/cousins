@@ -1,0 +1,1294 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Thirteen questions for Ella at Cousins Beach — dials, deep ones, stupid ones, and a report at the end built from her answers.">
+<meta name="theme-color" content="#05141E">
+<meta property="og:type" content="website">
+<meta property="og:title" content="The Ella Questions">
+<meta property="og:description" content="Thirteen questions. Some deep, some stupid, one about my ass. There's something at the end.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%90%9D%3C/text%3E%3C/svg%3E">
+<title>The Ella Questions</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400..600&family=Jost:ital,wght@0,300..600;1,300..500&family=Caveat:wght@400..700&display=swap">
+<style>
+  :root{
+    color-scheme: dark;
+    --deep:#05141E;
+    --deep-2:#0A1E2C;
+    --tide:#0E2A38;
+    --plum:#2B1B31;
+    --pearl:#F7EFE8;
+    --pearl-soft:rgba(247,239,232,.74);
+    --mist:rgba(247,239,232,.46);
+    --faint:rgba(247,239,232,.13);
+    --slate:#7E97A3;
+    --peach:#FFAE93;
+    --peach-deep:#F0896A;
+    --hydrangea:#AFC3F2;
+    --gold:#DCB375;
+
+    --panel:linear-gradient(176deg, rgba(21,51,67,.74) 0%, rgba(9,28,40,.80) 100%);
+    --edge:rgba(247,239,232,.11);
+
+    --display:'Bodoni Moda','Didot','Playfair Display',Georgia,serif;
+    --body:'Jost','Futura','Avenir Next',system-ui,-apple-system,sans-serif;
+    --hand:'Caveat','Segoe Script','Bradley Hand',cursive;
+
+    --ease:cubic-bezier(.22,.61,.36,1);
+  }
+
+  *{box-sizing:border-box}
+
+  body{
+    margin:0;
+    min-height:100dvh;
+    background:var(--deep);
+    color:var(--pearl);
+    font-family:var(--body);
+    font-weight:300;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+
+  /* ───────── scene ───────── */
+  .sky{
+    position:fixed; inset:0; z-index:-3;
+    background:
+      radial-gradient(130% 62% at 50% 112%, rgba(255,174,147,.26) 0%, rgba(240,137,106,.10) 38%, transparent 68%),
+      radial-gradient(76% 52% at 14% 2%, rgba(175,195,242,.17) 0%, transparent 64%),
+      radial-gradient(96% 60% at 92% 6%, rgba(43,27,49,.72) 0%, transparent 62%),
+      linear-gradient(181deg, #04111A 0%, #081D2A 34%, #0E2534 62%, #152E3C 84%, #1B3545 100%);
+  }
+  .horizon{
+    position:fixed; left:0; right:0; bottom:16vh; height:1px; z-index:-3;
+    background:linear-gradient(90deg, transparent, rgba(255,174,147,.34) 22%, rgba(255,205,183,.52) 50%, rgba(255,174,147,.34) 78%, transparent);
+    opacity:.5;
+  }
+  #motes{position:fixed; inset:0; z-index:-2; pointer-events:none}
+  .grain{
+    position:fixed; inset:0; z-index:-1; pointer-events:none; opacity:.05;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  /* ───────── shell ───────── */
+  .stage{
+    position:relative;
+    min-height:100dvh;
+    display:flex; flex-direction:column; align-items:center;
+    gap:clamp(18px,3.4vw,30px);
+    padding-inline:20px;
+    padding-block:clamp(22px,4vw,44px);
+  }
+
+  .topbar{width:100%; max-width:640px; display:flex; flex-direction:column; align-items:center; gap:10px}
+  .eyebrow{
+    font-size:.645rem; font-weight:500; letter-spacing:.26em; text-transform:uppercase;
+    color:var(--mist); margin:0; text-align:center;
+  }
+  .lights{width:min(300px,76vw); height:30px; display:block; overflow:visible}
+  .lights .wire{fill:none; stroke:rgba(247,239,232,.18); stroke-width:.8}
+  .lights .bulb{fill:rgba(247,239,232,.16); transition:fill .5s var(--ease)}
+  .lights .halo{fill:var(--peach); opacity:0; transition:opacity .6s var(--ease)}
+  .lights .on .bulb{fill:#FFD2BC}
+  .lights .on .halo{opacity:.22}
+  .lights .now .halo{opacity:.4}
+
+  /* ───────── card ───────── */
+  .card{
+    position:relative;
+    width:100%; max-width:640px;
+    background:var(--panel);
+    border:1px solid var(--edge);
+    border-radius:3px;
+    box-shadow:0 40px 90px -46px rgba(0,0,0,.95), 0 1px 0 rgba(247,239,232,.06) inset;
+    backdrop-filter:blur(16px) saturate(1.12);
+    -webkit-backdrop-filter:blur(16px) saturate(1.12);
+    padding:clamp(26px,5.4vw,44px);
+  }
+  .card::before{
+    content:""; position:absolute; inset:9px; pointer-events:none;
+    border:1px solid rgba(220,179,117,.16);
+  }
+  .card.wide{max-width:720px}
+
+  .q-head{display:flex; flex-direction:column; gap:12px; margin-bottom:26px}
+  .q-num{
+    font-size:.62rem; font-weight:500; letter-spacing:.24em; text-transform:uppercase; color:var(--peach);
+    display:flex; align-items:center; gap:10px;
+  }
+  .q-num::after{content:""; flex:1; height:1px; background:linear-gradient(90deg, rgba(255,174,147,.42), transparent)}
+  h1,h2{margin:0; font-family:var(--display); font-weight:400; text-wrap:balance}
+  .q-text{font-size:clamp(1.55rem,5.1vw,2.3rem); line-height:1.14; letter-spacing:-.01em}
+  .q-sub{margin:0; font-size:.955rem; line-height:1.6; color:var(--pearl-soft); max-width:54ch}
+  .q-sub em{font-style:italic; color:var(--pearl)}
+
+  /* options */
+  .options{display:flex; flex-direction:column; gap:9px}
+  .opt{
+    position:relative; display:block; width:100%; text-align:left;
+    font-family:var(--body); font-size:.985rem; font-weight:300; line-height:1.48; color:var(--pearl);
+    background:rgba(247,239,232,.028);
+    border:1px solid var(--faint); border-radius:2px;
+    padding:14px 17px 14px 19px;
+    cursor:pointer;
+    transition:background .28s var(--ease), border-color .28s var(--ease), transform .28s var(--ease), color .28s var(--ease);
+  }
+  .opt::before{
+    content:""; position:absolute; left:0; top:0; bottom:0; width:2px;
+    background:var(--peach); transform:scaleY(0); transform-origin:center;
+    transition:transform .34s var(--ease);
+  }
+  .opt:hover{background:rgba(255,174,147,.07); border-color:rgba(255,174,147,.42); transform:translateX(3px)}
+  .opt:hover::before{transform:scaleY(.45)}
+  .opt[aria-pressed="true"]{background:rgba(255,174,147,.115); border-color:var(--peach)}
+  .opt[aria-pressed="true"]::before{transform:scaleY(1)}
+  .opt .tick{
+    position:absolute; right:15px; top:50%; translate:0 -50%;
+    font-family:var(--display); font-size:.9rem; color:var(--peach); opacity:0; transition:opacity .3s var(--ease);
+  }
+  .opt[aria-pressed="true"] .tick{opacity:1}
+
+  .react{
+    margin:18px 0 0; min-height:1.2em;
+    font-family:var(--hand); font-size:clamp(1.18rem,4vw,1.42rem); line-height:1.35;
+    color:var(--peach); opacity:0; transform:translateY(5px);
+    transition:opacity .45s var(--ease), transform .45s var(--ease);
+  }
+  .react.show{opacity:1; transform:none}
+
+  /* buttons */
+  .actions{display:flex; flex-wrap:wrap; align-items:center; gap:14px; margin-top:26px}
+  .btn{
+    font-family:var(--body); font-size:.76rem; font-weight:500; letter-spacing:.17em; text-transform:uppercase;
+    padding:13px 24px; border-radius:2px; cursor:pointer; border:1px solid transparent;
+    transition:background .28s var(--ease), color .28s var(--ease), border-color .28s var(--ease), opacity .28s var(--ease), transform .28s var(--ease);
+  }
+  .btn-primary{background:var(--peach); color:#12232C; box-shadow:0 14px 34px -18px rgba(255,174,147,.8)}
+  .btn-primary:hover{background:#FFC6AF; transform:translateY(-1px)}
+  .btn-ghost{background:transparent; color:var(--pearl-soft); border-color:var(--faint)}
+  .btn-ghost:hover{color:var(--pearl); border-color:rgba(175,195,242,.5)}
+  .btn[disabled]{opacity:.32; cursor:default; transform:none}
+  .btn-text{
+    background:none; border:none; padding:6px 0; color:var(--mist); cursor:pointer;
+    font-family:var(--body); font-size:.72rem; letter-spacing:.14em; text-transform:uppercase;
+    border-bottom:1px solid var(--faint);
+  }
+  .btn-text:hover{color:var(--pearl-soft); border-color:var(--peach)}
+
+  :is(button,textarea,[role="slider"]):focus-visible{
+    outline:2px solid var(--hydrangea); outline-offset:3px;
+  }
+
+  /* textarea */
+  .write{
+    width:100%; min-height:132px; resize:vertical;
+    font-family:var(--body); font-size:1.02rem; font-weight:300; line-height:1.62; color:var(--pearl);
+    background:rgba(5,20,30,.42); border:1px solid var(--faint); border-radius:2px;
+    padding:15px 16px;
+    transition:border-color .28s var(--ease), background .28s var(--ease);
+  }
+  .write::placeholder{color:rgba(247,239,232,.3); font-style:italic}
+  .write:focus{border-color:rgba(255,174,147,.5); background:rgba(5,20,30,.6); outline-offset:3px}
+  .count{margin:9px 0 0; font-size:.68rem; letter-spacing:.14em; text-transform:uppercase; color:var(--mist); font-variant-numeric:tabular-nums}
+
+  /* dial */
+  .dial-wrap{display:flex; flex-direction:column; align-items:center; gap:4px}
+  .dial{
+    width:min(268px,70vw); aspect-ratio:1; touch-action:none; cursor:grab; display:block; border-radius:50%;
+    max-width:100%;
+  }
+  .dial:active{cursor:grabbing}
+  .dial .tickmark{stroke:rgba(247,239,232,.26); stroke-width:1.1}
+  .dial .tickmark.hot{stroke:var(--peach)}
+  .dial .track{fill:none; stroke:rgba(247,239,232,.11); stroke-width:7; stroke-linecap:round}
+  .dial .fill{fill:none; stroke:url(#dialgrad); stroke-width:7; stroke-linecap:round; filter:url(#glow)}
+  .dial .knob-face{fill:url(#knobgrad); stroke:rgba(247,239,232,.16)}
+  .dial .notch{stroke:var(--peach); stroke-width:2.6; stroke-linecap:round}
+  .dial .val{
+    font-family:var(--display); font-weight:500; font-size:50px; fill:var(--pearl);
+    text-anchor:middle; font-variant-numeric:tabular-nums; letter-spacing:-.02em;
+  }
+  .dial .endcap{font-family:var(--body); font-size:9px; letter-spacing:.18em; fill:var(--mist); text-transform:uppercase}
+  .band{
+    margin:0; text-align:center; min-height:2.6em;
+    font-family:var(--hand); font-size:clamp(1.24rem,4.3vw,1.52rem); line-height:1.3; color:var(--peach);
+    max-width:30ch;
+  }
+  .hint{margin:0; font-size:.66rem; letter-spacing:.2em; text-transform:uppercase; color:var(--mist)}
+
+  /* multi */
+  .grid{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:9px}
+  @media (max-width:560px){ .grid{grid-template-columns:1fr} }
+  .chip{
+    position:relative; text-align:left; font-family:var(--body); font-size:.93rem; font-weight:300; line-height:1.42;
+    color:var(--pearl); background:rgba(247,239,232,.028);
+    border:1px solid var(--faint); border-radius:2px; padding:13px 15px; cursor:pointer;
+    transition:background .26s var(--ease), border-color .26s var(--ease), color .26s var(--ease);
+  }
+  .chip:hover{border-color:rgba(175,195,242,.46); background:rgba(175,195,242,.07)}
+  .chip[aria-pressed="true"]{background:rgba(175,195,242,.23); border-color:var(--hydrangea); color:#fff; box-shadow:inset 0 0 0 1px rgba(175,195,242,.42)}
+  .chip[aria-pressed="true"]::after{content:"✓"; margin-left:7px; color:var(--hydrangea)}
+  .chip.locked{opacity:.4}
+
+  /* interstitial note */
+  .note-card{text-align:center; padding-block:clamp(36px,7vw,56px)}
+  .note-body{
+    font-family:var(--hand); font-size:clamp(1.42rem,5vw,2rem); line-height:1.44; color:var(--pearl);
+    margin:0 auto; max-width:26ch;
+  }
+  .note-sig{
+    margin:22px 0 0; font-family:var(--body); font-size:.64rem; letter-spacing:.3em; text-transform:uppercase; color:var(--peach);
+  }
+  .seal{
+    width:34px; height:34px; margin:0 auto 24px; border:1px solid rgba(220,179,117,.5); border-radius:50%;
+    display:grid; place-items:center; font-family:var(--display); font-size:.82rem; color:var(--gold);
+  }
+
+  /* chosen */
+  .chosen-lines{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:13px}
+  .chosen-lines li{
+    font-family:var(--display); font-size:clamp(1.12rem,3.9vw,1.44rem); line-height:1.34; font-weight:400;
+    opacity:0; transform:translateY(8px);
+    transition:opacity .7s var(--ease), transform .7s var(--ease);
+    padding-left:20px; position:relative;
+  }
+  .chosen-lines li::before{
+    content:""; position:absolute; left:0; top:.62em; width:9px; height:1px; background:var(--peach); opacity:.6;
+  }
+  .chosen-lines li.in{opacity:1; transform:none}
+  .chosen-lines li.key{font-style:italic; color:#FFD9C8}
+
+  /* margin note */
+  .margin-note{
+    margin:0; text-align:center; max-width:34ch;
+    font-family:var(--hand); font-size:clamp(1.14rem,3.9vw,1.34rem); line-height:1.4;
+    color:rgba(255,174,147,.72);
+    transition:opacity .5s var(--ease);
+  }
+
+  /* ───────── summary ───────── */
+  .report{width:100%; max-width:690px; display:flex; flex-direction:column; gap:clamp(30px,5vw,46px)}
+  .report-hero{text-align:center; display:flex; flex-direction:column; gap:14px; align-items:center}
+  .for-ella{font-size:.64rem; letter-spacing:.3em; text-transform:uppercase; color:var(--mist); margin:0}
+  .archetype{font-size:clamp(2rem,7.6vw,3.3rem); line-height:1.04; font-style:italic; letter-spacing:-.015em}
+  .rule{width:48px; height:1px; background:var(--gold); opacity:.6}
+  .verdict{margin:0; font-size:1.03rem; line-height:1.66; color:var(--pearl-soft); max-width:50ch}
+
+  .sec-label{
+    margin:0 0 16px; font-size:.63rem; font-weight:500; letter-spacing:.26em; text-transform:uppercase; color:var(--peach);
+    display:flex; align-items:center; gap:11px;
+  }
+  .sec-label::after{content:""; flex:1; height:1px; background:var(--faint)}
+
+  .readings{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:1px; background:var(--faint)}
+  @media (max-width:540px){ .readings{grid-template-columns:1fr} }
+  .reading{background:rgba(9,28,40,.6); padding:20px 18px; display:flex; flex-direction:column; gap:7px}
+  .reading-k{font-size:.6rem; letter-spacing:.2em; text-transform:uppercase; color:var(--mist)}
+  .reading-v{font-family:var(--display); font-size:2.5rem; font-weight:500; line-height:1; font-variant-numeric:tabular-nums; color:var(--pearl)}
+  .reading-v small{font-size:.9rem; color:var(--mist); font-weight:400}
+  .reading-n{font-family:var(--hand); font-size:1.08rem; line-height:1.3; color:var(--peach)}
+
+  .quotes{display:flex; flex-direction:column; gap:26px}
+  .quote-k{margin:0 0 9px; font-size:.68rem; letter-spacing:.14em; text-transform:uppercase; color:var(--mist)}
+  blockquote{
+    margin:0; padding-left:18px; border-left:1px solid rgba(255,174,147,.44);
+    font-family:var(--display); font-size:clamp(1.1rem,3.7vw,1.3rem); line-height:1.5; font-style:italic;
+    color:var(--pearl); white-space:pre-wrap; overflow-wrap:break-word;
+  }
+  blockquote.skipped{font-style:normal; font-family:var(--body); font-size:1rem; color:var(--mist); border-left-color:var(--faint)}
+
+  .promises{list-style:none; margin:0; padding:0}
+  .promises li{
+    display:grid; grid-template-columns:auto 1fr; gap:14px; align-items:baseline;
+    padding:15px 0; border-bottom:1px solid var(--faint);
+  }
+  .promises li:first-child{border-top:1px solid var(--faint)}
+  .promises .tag{font-size:.56rem; letter-spacing:.18em; text-transform:uppercase; color:var(--hydrangea); white-space:nowrap}
+  .promises .p-text{font-size:1rem; line-height:1.56; color:var(--pearl)}
+  .promises .p-want{display:block; font-size:.76rem; letter-spacing:.06em; color:var(--mist); margin-top:4px}
+
+  .filed{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:11px}
+  .filed li{
+    font-size:.95rem; line-height:1.55; color:var(--pearl-soft); padding-left:22px; position:relative;
+  }
+  .filed li::before{content:"—"; position:absolute; left:0; color:var(--gold); opacity:.7}
+
+  .letter{padding:clamp(28px,5.4vw,42px)}
+  .letter p{margin:0 0 18px; font-size:1.035rem; line-height:1.75; color:var(--pearl)}
+  .letter p:last-of-type{margin-bottom:0}
+  .letter .salut{font-family:var(--display); font-size:1.4rem; margin-bottom:22px}
+  .letter .ily{font-family:var(--hand); font-size:clamp(1.6rem,5.4vw,2.1rem); line-height:1.25; color:var(--peach); margin:28px 0 6px}
+  .letter .sign{font-family:var(--hand); font-size:1.5rem; color:var(--pearl)}
+
+  .report-foot{text-align:center; display:flex; flex-direction:column; align-items:center; gap:16px; padding-bottom:10px}
+  .report-foot p{margin:0; font-size:.68rem; letter-spacing:.18em; text-transform:uppercase; color:var(--mist)}
+
+  .screen{animation:rise .5s var(--ease) both}
+  @keyframes rise{from{opacity:0; transform:translateY(14px)} to{opacity:1; transform:none}}
+
+  @media (prefers-reduced-motion:reduce){
+    *{animation-duration:.001s !important; transition-duration:.001s !important}
+    .opt:hover{transform:none}
+  }
+</style>
+
+</head>
+<body>
+<div class="sky"></div>
+<div class="horizon"></div>
+<canvas id="motes" aria-hidden="true"></canvas>
+<div class="grain" aria-hidden="true"></div>
+
+<div class="stage">
+  <header class="topbar">
+    <p class="eyebrow" id="eyebrow">Cousins Beach · for Ella · from Tiago</p>
+    <svg class="lights" id="lights" viewBox="0 0 300 30" aria-hidden="true"></svg>
+  </header>
+  <main id="screen" class="card screen" aria-live="polite"></main>
+  <p class="margin-note" id="marginNote">i love you. ok, carry on.</p>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  var REDUCED = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var screen = document.getElementById("screen");
+  var lights = document.getElementById("lights");
+  var eyebrow = document.getElementById("eyebrow");
+  var marginNote = document.getElementById("marginNote");
+
+  /* ───────────────────────── content ───────────────────────── */
+
+  var NOTES = [
+    "i love you. ok, carry on.",
+    "(i was thinking about you before you opened this)",
+    "you're the best thing i've ever done on purpose",
+    "hanbee ♡",
+    "i'd pick you again. today. twice.",
+    "no notes. you're perfect.",
+    "this is the bit where i remind you i love you",
+    "fyi: you're it for me, bee",
+    "i love you more than the beach house",
+    "i'd drive to cousins for you. in the rain. tonight.",
+    "still my favourite person. still not close.",
+    "i hope you know. i really do.",
+    "i love you, even now, mid-quiz",
+    "you, specifically. always you.",
+    "don't tell anyone but you're my whole thing"
+  ];
+
+  var DIAL_BANDS = {
+    effect: [
+      [9,  "completely fine. unbothered. a rock."],
+      [29, "slight flutter. nothing to report."],
+      [49, "i looked away first. so what."],
+      [69, "warm. forgot what i was saying."],
+      [89, "legs: unreliable. brain: offline."],
+      [99, "i need to sit down. don't look at me."],
+      [100,"feral. absolutely feral. see you upstairs."]
+    ],
+    ass: [
+      [9,  "flat. a rumour. an urban legend."],
+      [29, "it's there. technically."],
+      [49, "respectable. gym-adjacent."],
+      [69, "ok that's a good one, well done"],
+      [89, "distracting. i stare. i'm normal about it."],
+      [99, "criminal. you should be stopped."],
+      [100,"unwell. genuinely unwell. no notes."]
+    ],
+    annoying: [
+      [9,  "perfect angel, never wrong, flawless"],
+      [29, "mildly. like a nice song played too loud."],
+      [49, "standard boyfriend levels."],
+      [69, "you talk during films. i know you do."],
+      [89, "genuinely a lot. i'd keep you though."],
+      [99, "unbearable. and i'm still here."],
+      [100,"maximum. the ceiling. and yet — mine."]
+    ]
+  };
+
+  var WANTS = [
+    { id:"chosen",  label:"Being chosen out loud",              promise:"I'll say it where people can hear it. Out loud, with your name in it, until it's embarrassing for everyone but us." },
+    { id:"neck",    label:"Your hand on the back of my neck",   promise:"Hand on the back of your neck every single time you walk past me. This is now policy. There is no appeals process." },
+    { id:"proud",   label:"Being told you're proud of me",      promise:"I'll tell you I'm proud of you before you've even finished the thing. For the record, I'm proud of you right now, and you've only answered a quiz." },
+    { id:"drives",  label:"Long drives with no destination",    promise:"I'll pick a direction and not tell you where. You get the aux. You get one bad song, and we both know which one." },
+    { id:"kiss",    label:"Being kissed before you say anything", promise:"Door opens, you get kissed, then we talk. In that order. Forever. Even when I'm annoyed at you." },
+    { id:"real",    label:"Being asked how you actually are",   promise:"Not “you good?” — the real one, the one with your name in it. And then I shut up and wait for the real answer." },
+    { id:"loud",    label:"Being wanted loudly, in front of people", promise:"I'll embarrass us both in public, repeatedly, with enthusiasm. Your friends will talk. Let them." },
+    { id:"asleep",  label:"Falling asleep on you mid-sentence", promise:"Fall asleep on me halfway through a sentence. I'll finish it for you in my head and get it wrong on purpose." }
+  ];
+
+  var STEPS = [
+    { type:"intro" },
+
+    { type:"choice", id:"fisher",
+      q:"House rules first. Who is the hottest Fisher brother?",
+      sub:"This is a formality. There is exactly one wrong answer and we both know it.",
+      opts:[
+        { id:"conrad",  label:"Conrad. Obviously. It's Conrad.", react:"correct. instantly. you may continue." },
+        { id:"guilty",  label:"Conrad, but I feel slightly bad about it.", react:"the guilt is part of it. that's the conrad thing." },
+        { id:"jeremiah",label:"Jeremiah — he's nicer and he smiles.", react:"ella. ELLA. get out of the house. (it's going in the file)" },
+        { id:"steven",  label:"Steven, and I'd like to explain why.", react:"you would not. be serious." }
+      ] },
+
+    { type:"dial", id:"effect", start:22,
+      q:"Set the dial. How normal do you feel when I look at you a second too long?",
+      sub:"Drag it. Be honest, there's no one watching except me, later, when you show me this.",
+      lo:"fine", hi:"feral" },
+
+    { type:"text", id:"knew",
+      q:"When did you know it was me?",
+      sub:"Not when you started fancying me. When you <em>knew</em>. Conrad knew at a bonfire and then said nothing for about four years. I'd rather hear yours.",
+      ph:"it was the night when…" },
+
+    { type:"note", body:"I'm going to interrupt the quiz to say I love you.\nThat's it. That's the whole interruption.", sig:"Tiago" },
+
+    { type:"choice", id:"room",
+      q:"We get the summer house. Which room is ours?",
+      sub:"Pick for real. I'm going to remember this when it actually happens.",
+      opts:[
+        { id:"window",  label:"The one with the window seat facing the water — so I can read and you can pretend you're not watching me.", react:"i'd be watching you. constantly. no pretending." },
+        { id:"attic",   label:"The attic. Bad wifi, one loud fan, zero chance of being found.", react:"attic it is. i'll carry everything up. you bring nothing." },
+        { id:"kitchen", label:"Downstairs, nearest the kitchen. Priorities are priorities.", react:"a woman who knows what she's about. respect." },
+        { id:"follow",  label:"Whichever one you walk into first. I'll follow you in.", react:"you say things like this and then wonder why i'm like this." }
+      ] },
+
+    { type:"dial", id:"ass", start:18,
+      q:"Rate my ass. Out of 100. I can take it.",
+      sub:"This is a judgement-free zone and also a permanent record.",
+      lo:"nothing", hi:"unwell" },
+
+    { type:"text", id:"thing",
+      q:"What's something I do that you've never told me you love?",
+      sub:"Not “you're kind.” The small, stupid, specific thing. The one you noticed and kept to yourself.",
+      ph:"when you…" },
+
+    { type:"multi", id:"wants", max:3,
+      q:"Pick three things you want more of.",
+      sub:"Choose three. I'll actually do them — they come back at the end as promises, and I don't put things in writing lightly.",
+      opts:WANTS },
+
+    { type:"note", body:"Out of everyone, it's you.\nNot “it ended up being you.” It's you. I'd do the whole thing again, on purpose, knowing everything.", sig:"your hanbee" },
+
+    { type:"choice", id:"farts",
+      q:"Be honest. Who farts more in this relationship?",
+      sub:"The dial is watching. God is watching. I am watching.",
+      opts:[
+        { id:"you",     label:"You. Easily you. It's not even a competition.", react:"a bold lie, in writing, with witnesses." },
+        { id:"me",      label:"Me. Unfortunately, me.", react:"finally. honesty. devastating, but honest. i love you." },
+        { id:"both",    label:"It's a partnership. 50/50. Beautiful, really.", react:"a diplomat. disgusting. carry on." },
+        { id:"neither", label:"Neither of us. We're ladies.", react:"ella. i was there. i was in the room." }
+      ] },
+
+    { type:"choice", id:"jere",
+      q:"I die tragically in the sea at Cousins. How long until Jeremiah?",
+      sub:"Take your time. Grieve properly. Then answer.",
+      opts:[
+        { id:"immediately",  label:"Immediately. He's already waiting in the car.", react:"i knew it. i've always known it." },
+        { id:"one-summer",   label:"One (1) sad summer, and then him.", react:"one summer. i'll take it. i'd have given you two." },
+        { id:"never",        label:"Never. I'm doing the whole widow-in-a-huge-hat thing.", react:"the hat would be incredible on you. don't test it." },
+        { id:"after-you",    label:"Don't be stupid — I'd come in after you.", react:"wrong answer. stay on the beach. but also… yeah. me too." }
+      ] },
+
+    { type:"text", id:"scared",
+      q:"What's the thing you're a bit scared of, about us?",
+      sub:"You can put it here. It's just a webpage and me. I'd much rather know it than let you carry it around on your own.",
+      ph:"i suppose i worry that…" },
+
+    { type:"dial", id:"annoying", start:30,
+      q:"How annoying am I, out of 100?",
+      sub:"There's no trap here. (There is a very small trap.)",
+      lo:"angel", hi:"unbearable" },
+
+    { type:"choice", id:"deb",
+      q:"Debutante ball. Two boys, one hand to hold, music already started.",
+      sub:"Everyone in Cousins is looking at you. What do you do?",
+      opts:[
+        { id:"look",   label:"I look for you first. I always look for you first.", react:"i'd already be looking. i'd have been looking the whole time." },
+        { id:"conrad", label:"I take Conrad's hand. It was never actually a decision.", react:"never a decision. that's exactly what it feels like." },
+        { id:"beach",  label:"I'd rather leave. Take me down to the beach, Tiago.", react:"shoes off, say nothing, straight out the side door. done." },
+        { id:"ask",    label:"I'd make you ask me properly. In front of everyone.", react:"then i'd ask properly. in front of everyone. loudly." }
+      ] },
+
+    { type:"chosen" },
+
+    { type:"text", id:"summer",
+      q:"Last one. What does next summer look like?",
+      sub:"Say it like it's already happening. Present tense. I'll believe anything you type here.",
+      ph:"we're…" },
+
+    { type:"summary" }
+  ];
+
+  var QUESTION_TYPES = { choice:1, dial:1, text:1, multi:1 };
+  var QUESTION_INDEXES = [];
+  for (var i = 0; i < STEPS.length; i++) if (QUESTION_TYPES[STEPS[i].type]) QUESTION_INDEXES.push(i);
+  var TOTAL_Q = QUESTION_INDEXES.length;
+
+  /* ───────────────────────── state ───────────────────────── */
+
+  var answers = {};
+  var index = 0;
+  var KEY = "ella-questions-v1";
+
+  function save(){
+    try { localStorage.setItem(KEY, JSON.stringify({ a: answers, i: index })); } catch(e){}
+  }
+  function load(){
+    try {
+      var raw = localStorage.getItem(KEY);
+      if (!raw) return null;
+      var d = JSON.parse(raw);
+      if (d && d.a && typeof d.i === "number") return d;
+    } catch(e){}
+    return null;
+  }
+  function wipe(){ try { localStorage.removeItem(KEY); } catch(e){} }
+
+  /* ───────────────────────── helpers ───────────────────────── */
+
+  function el(tag, cls, text){
+    var n = document.createElement(tag);
+    if (cls) n.className = cls;
+    if (text != null) n.textContent = text;
+    return n;
+  }
+  function html(tag, cls, markup){
+    var n = document.createElement(tag);
+    if (cls) n.className = cls;
+    if (markup != null) n.innerHTML = markup;
+    return n;
+  }
+  function svgEl(tag, attrs){
+    var n = document.createElementNS("http://www.w3.org/2000/svg", tag);
+    for (var k in attrs) n.setAttribute(k, attrs[k]);
+    return n;
+  }
+  function clamp(v, a, b){ return v < a ? a : v > b ? b : v; }
+  function num(v, d){ return typeof v === "number" ? v : d; }
+  function band(kind, v){
+    var b = DIAL_BANDS[kind];
+    for (var i = 0; i < b.length; i++) if (v <= b[i][0]) return b[i][1];
+    return b[b.length-1][1];
+  }
+  function trimmed(id){ return (answers[id] || "").trim(); }
+
+  /* ───────────────────────── porch lights ───────────────────────── */
+
+  function bez(t, p0, p1, p2){
+    var u = 1 - t;
+    return { x: u*u*p0.x + 2*u*t*p1.x + t*t*p2.x, y: u*u*p0.y + 2*u*t*p1.y + t*t*p2.y };
+  }
+
+  function buildLights(){
+    var p0 = {x:6,y:6}, p1 = {x:150,y:25}, p2 = {x:294,y:6};
+    lights.appendChild(svgEl("path", { "class":"wire", d:"M6 6 Q150 25 294 6" }));
+    for (var i = 0; i < TOTAL_Q; i++){
+      var pt = bez(i/(TOTAL_Q-1), p0, p1, p2);
+      var g = svgEl("g", { "class":"bulbgroup", "data-i":String(i) });
+      g.appendChild(svgEl("circle", { "class":"halo", cx:pt.x.toFixed(2), cy:(pt.y+6).toFixed(2), r:"7.5" }));
+      g.appendChild(svgEl("circle", { "class":"bulb", cx:pt.x.toFixed(2), cy:(pt.y+6).toFixed(2), r:"2.5" }));
+      lights.appendChild(g);
+    }
+  }
+
+  function paintLights(){
+    var qPos = QUESTION_INDEXES.indexOf(index);
+    var done = 0;
+    for (var i = 0; i < QUESTION_INDEXES.length; i++) if (QUESTION_INDEXES[i] < index) done++;
+    var groups = lights.querySelectorAll(".bulbgroup");
+    for (var j = 0; j < groups.length; j++){
+      groups[j].classList.toggle("on", j < done || (qPos >= 0 && j <= qPos));
+      groups[j].classList.toggle("now", qPos >= 0 && j === qPos);
+    }
+  }
+
+  /* ───────────────────────── fireflies ───────────────────────── */
+
+  (function motes(){
+    var c = document.getElementById("motes");
+    var ctx = c.getContext("2d");
+    var dots = [], W = 0, H = 0, dpr = Math.min(window.devicePixelRatio || 1, 2);
+
+    function size(){
+      W = c.clientWidth; H = c.clientHeight;
+      c.width = Math.floor(W*dpr); c.height = Math.floor(H*dpr);
+      ctx.setTransform(dpr,0,0,dpr,0,0);
+    }
+    function seed(){
+      dots = [];
+      var n = W < 520 ? 22 : 38;
+      for (var i = 0; i < n; i++){
+        dots.push({
+          x: Math.random()*W, y: Math.random()*H,
+          r: 0.7 + Math.random()*1.9,
+          s: 0.07 + Math.random()*0.22,
+          ph: Math.random()*Math.PI*2,
+          sw: 6 + Math.random()*16,
+          a: 0.18 + Math.random()*0.5,
+          warm: Math.random() > 0.38
+        });
+      }
+    }
+    function draw(t){
+      ctx.clearRect(0,0,W,H);
+      for (var i = 0; i < dots.length; i++){
+        var d = dots[i];
+        var x = d.x + Math.sin(t/2400 + d.ph) * d.sw;
+        var tw = 0.65 + 0.35*Math.sin(t/900 + d.ph*3);
+        ctx.beginPath();
+        ctx.fillStyle = d.warm ? "rgba(255,196,170," + (d.a*tw).toFixed(3) + ")"
+                               : "rgba(186,205,245," + (d.a*tw*0.85).toFixed(3) + ")";
+        ctx.shadowBlur = 9; ctx.shadowColor = ctx.fillStyle;
+        ctx.arc(x, d.y, d.r, 0, Math.PI*2);
+        ctx.fill();
+      }
+      ctx.shadowBlur = 0;
+    }
+    function step(t){
+      for (var i = 0; i < dots.length; i++){
+        var d = dots[i];
+        d.y -= d.s;
+        if (d.y < -12){ d.y = H + 12; d.x = Math.random()*W; }
+      }
+      draw(t);
+      requestAnimationFrame(step);
+    }
+    size(); seed();
+    if (REDUCED) draw(0); else requestAnimationFrame(step);
+    window.addEventListener("resize", function(){ size(); seed(); if (REDUCED) draw(0); });
+  })();
+
+  /* ───────────────────────── navigation ───────────────────────── */
+
+  function go(n){
+    index = clamp(n, 0, STEPS.length - 1);
+    save();
+    render();
+    if (index > 0) {
+      var top = document.querySelector(".topbar");
+      if (top && window.scrollY > 40) window.scrollTo({ top: 0, behavior: REDUCED ? "auto" : "smooth" });
+    }
+  }
+  function next(){ go(index + 1); }
+
+  function setChrome(){
+    var step = STEPS[index];
+    var isQ = !!QUESTION_TYPES[step.type];
+    var qPos = QUESTION_INDEXES.indexOf(index);
+
+    lights.style.visibility = (step.type === "intro" || step.type === "summary") ? "hidden" : "visible";
+
+    if (step.type === "summary") eyebrow.textContent = "Cousins Beach · the full report · Ella";
+    else if (step.type === "intro") eyebrow.textContent = "Cousins Beach · for Ella · from Tiago";
+    else if (isQ) eyebrow.textContent = "Question " + (qPos+1) + " of " + TOTAL_Q;
+    else eyebrow.textContent = (step.type === "chosen") ? "The important bit" : "A short interruption";
+
+    if (step.type === "summary"){
+      marginNote.style.display = "none";
+    } else {
+      marginNote.style.display = "";
+      marginNote.style.opacity = "0";
+      var line = NOTES[index % NOTES.length];
+      window.setTimeout(function(){ marginNote.textContent = line; marginNote.style.opacity = "1"; }, REDUCED ? 0 : 180);
+    }
+    paintLights();
+  }
+
+  function render(){
+    var step = STEPS[index];
+    screen.innerHTML = "";
+    screen.classList.remove("screen");
+    void screen.offsetWidth;
+    screen.classList.add("screen");
+    screen.classList.toggle("wide", step.type === "summary" || step.type === "chosen");
+
+    if (step.type === "summary"){
+      screen.className = "report screen";
+      screen.style.background = "none";
+      screen.style.border = "none";
+      screen.style.boxShadow = "none";
+      screen.style.backdropFilter = "none";
+      screen.style.padding = "0";
+    } else {
+      screen.style.cssText = "";
+    }
+
+    setChrome();
+
+    ({ intro:renderIntro, choice:renderChoice, dial:renderDial, text:renderText,
+       multi:renderMulti, note:renderNote, chosen:renderChosen, summary:renderSummary })[step.type](step);
+  }
+
+  function head(step, qPos){
+    var h = el("div","q-head");
+    if (qPos != null) h.appendChild(el("p","q-num","Q" + (qPos+1)));
+    h.appendChild(html("h1","q-text", step.q));
+    if (step.sub) h.appendChild(html("p","q-sub", step.sub));
+    return h;
+  }
+
+  /* ───────────────────────── screens ───────────────────────── */
+
+  function renderIntro(){
+    var wrap = el("div","note-card");
+    wrap.appendChild(el("div","seal","∞"));
+    wrap.appendChild(html("h1","q-text", "Hi hanbee."));
+    var p = el("p","q-sub","I made you something. There are " + TOTAL_Q + " questions — some of them are deep, some of them are stupid, one of them is about my ass. There are dials. Answer honestly, because at the end it reads you back to yourself.");
+    p.style.margin = "18px auto 0";
+    p.style.textAlign = "left";
+    wrap.appendChild(p);
+
+    var meta = el("p","hint","13 questions · about four minutes · one wrong answer");
+    meta.style.marginTop = "22px";
+    wrap.appendChild(meta);
+
+    var acts = el("div","actions");
+    acts.style.justifyContent = "center";
+    var btn = el("button","btn btn-primary","Take me to Cousins");
+    btn.addEventListener("click", function(){ answers = {}; go(1); });
+    acts.appendChild(btn);
+    wrap.appendChild(acts);
+
+    var saved = load();
+    if (saved && saved.i > 1 && saved.i < STEPS.length - 1){
+      var resume = el("button","btn-text","Pick up where I left off");
+      resume.style.marginTop = "16px";
+      resume.addEventListener("click", function(){ answers = saved.a || {}; go(saved.i); });
+      wrap.appendChild(resume);
+    }
+    screen.appendChild(wrap);
+  }
+
+  function renderChoice(step){
+    var qPos = QUESTION_INDEXES.indexOf(index);
+    screen.appendChild(head(step, qPos));
+
+    var box = el("div","options");
+    var react = el("p","react");
+    var acts = el("div","actions");
+    var cont = el("button","btn btn-primary","Next");
+    cont.disabled = !answers[step.id];
+    cont.addEventListener("click", next);
+
+    step.opts.forEach(function(o){
+      var b = el("button","opt");
+      b.type = "button";
+      b.setAttribute("aria-pressed", answers[step.id] === o.id ? "true" : "false");
+      b.appendChild(document.createTextNode(o.label));
+      b.appendChild(el("span","tick","∞"));
+      b.addEventListener("click", function(){
+        answers[step.id] = o.id;
+        save();
+        box.querySelectorAll(".opt").forEach(function(x){ x.setAttribute("aria-pressed","false"); });
+        b.setAttribute("aria-pressed","true");
+        react.classList.remove("show");
+        window.setTimeout(function(){ react.textContent = o.react; react.classList.add("show"); }, REDUCED ? 0 : 130);
+        cont.disabled = false;
+      });
+      box.appendChild(b);
+    });
+
+    if (answers[step.id]){
+      var chosen = step.opts.filter(function(o){ return o.id === answers[step.id]; })[0];
+      if (chosen){ react.textContent = chosen.react; react.classList.add("show"); }
+    }
+
+    screen.appendChild(box);
+    screen.appendChild(react);
+    acts.appendChild(cont);
+    acts.appendChild(backLink());
+    screen.appendChild(acts);
+  }
+
+  function renderDial(step){
+    var qPos = QUESTION_INDEXES.indexOf(index);
+    screen.appendChild(head(step, qPos));
+
+    var value = num(answers[step.id], step.start);
+    var wrap = el("div","dial-wrap");
+
+    var SZ = 220, C = SZ/2, R = 78, CIRC = 2*Math.PI*R, ARC = CIRC*0.75;
+    var svg = svgEl("svg", {
+      "class":"dial", viewBox:"0 0 " + SZ + " " + SZ,
+      role:"slider", tabindex:"0",
+      "aria-label":step.q, "aria-valuemin":"0", "aria-valuemax":"100", "aria-valuenow":String(value)
+    });
+
+    var defs = svgEl("defs");
+    defs.innerHTML =
+      '<linearGradient id="dialgrad" x1="0" y1="1" x2="1" y2="0">' +
+        '<stop offset="0%" stop-color="#AFC3F2"/><stop offset="52%" stop-color="#FFAE93"/><stop offset="100%" stop-color="#FFD2BC"/>' +
+      '</linearGradient>' +
+      '<radialGradient id="knobgrad" cx="38%" cy="30%" r="78%">' +
+        '<stop offset="0%" stop-color="#1D4356"/><stop offset="60%" stop-color="#0F2C3B"/><stop offset="100%" stop-color="#071A25"/>' +
+      '</radialGradient>' +
+      '<filter id="glow" x="-55%" y="-55%" width="210%" height="210%">' +
+        '<feGaussianBlur stdDeviation="4.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>' +
+      '</filter>';
+    svg.appendChild(defs);
+
+    // tick marks
+    var tickG = svgEl("g", {});
+    var TICKS = 33;
+    for (var t = 0; t < TICKS; t++){
+      var frac = t/(TICKS-1);
+      var ang = (-135 + 270*frac) * Math.PI/180;
+      var r1 = R + 13, r2 = R + (t % 4 === 0 ? 21 : 17);
+      tickG.appendChild(svgEl("line", {
+        "class":"tickmark", "data-frac":frac.toFixed(4),
+        x1:(C + Math.sin(ang)*r1).toFixed(2), y1:(C - Math.cos(ang)*r1).toFixed(2),
+        x2:(C + Math.sin(ang)*r2).toFixed(2), y2:(C - Math.cos(ang)*r2).toFixed(2)
+      }));
+    }
+    svg.appendChild(tickG);
+
+    svg.appendChild(svgEl("circle", {
+      "class":"track", cx:C, cy:C, r:R,
+      "stroke-dasharray": ARC.toFixed(2) + " " + CIRC.toFixed(2),
+      transform:"rotate(135 " + C + " " + C + ")"
+    }));
+    var fill = svgEl("circle", {
+      "class":"fill", cx:C, cy:C, r:R,
+      "stroke-dasharray":"0 " + CIRC.toFixed(2),
+      transform:"rotate(135 " + C + " " + C + ")"
+    });
+    svg.appendChild(fill);
+
+    svg.appendChild(svgEl("circle", { "class":"knob-face", cx:C, cy:C, r:R-16 }));
+    var notch = svgEl("line", { "class":"notch", x1:C, y1:C-(R-48), x2:C, y2:C-(R-24) });
+    svg.appendChild(notch);
+    var valText = svgEl("text", { "class":"val", x:C, y:C+18 });
+    svg.appendChild(valText);
+
+    svg.appendChild(svgEl("text", { "class":"endcap", x:"30", y:"202", "text-anchor":"start" })).textContent = step.lo;
+    svg.appendChild(svgEl("text", { "class":"endcap", x:"190", y:"202", "text-anchor":"end" })).textContent = step.hi;
+
+    var bandP = el("p","band");
+    var hintP = el("p","hint","drag the dial");
+    var ticks = tickG.querySelectorAll(".tickmark");
+
+    function paint(){
+      fill.setAttribute("stroke-dasharray", (ARC*value/100).toFixed(2) + " " + CIRC.toFixed(2));
+      var ang = -135 + 270*(value/100);
+      notch.setAttribute("transform", "rotate(" + ang.toFixed(2) + " " + C + " " + C + ")");
+      valText.textContent = Math.round(value);
+      svg.setAttribute("aria-valuenow", String(Math.round(value)));
+      svg.setAttribute("aria-valuetext", Math.round(value) + " — " + band(step.id, value));
+      bandP.textContent = band(step.id, value);
+      for (var i = 0; i < ticks.length; i++){
+        ticks[i].classList.toggle("hot", parseFloat(ticks[i].getAttribute("data-frac")) <= value/100 + 0.001);
+      }
+    }
+    function set(v, store){
+      value = clamp(Math.round(v), 0, 100);
+      paint();
+      if (store !== false){ answers[step.id] = value; save(); }
+    }
+    function fromPoint(cx, cy){
+      var r = svg.getBoundingClientRect();
+      var dx = cx - (r.left + r.width/2);
+      var dy = cy - (r.top + r.height/2);
+      var deg = Math.atan2(dx, -dy) * 180/Math.PI;
+      if (deg > 160) deg = 135;
+      if (deg < -160) deg = -135;
+      set((clamp(deg, -135, 135) + 135) / 2.7);
+    }
+
+    var dragging = false;
+    svg.addEventListener("pointerdown", function(e){
+      dragging = true;
+      svg.setPointerCapture(e.pointerId);
+      hintP.textContent = "that's it — keep going";
+      fromPoint(e.clientX, e.clientY);
+    });
+    svg.addEventListener("pointermove", function(e){ if (dragging) fromPoint(e.clientX, e.clientY); });
+    svg.addEventListener("pointerup", function(e){
+      dragging = false;
+      try { svg.releasePointerCapture(e.pointerId); } catch(err){}
+    });
+    svg.addEventListener("pointercancel", function(){ dragging = false; });
+    svg.addEventListener("keydown", function(e){
+      var k = e.key, d = 0;
+      if (k === "ArrowRight" || k === "ArrowUp") d = 1;
+      else if (k === "ArrowLeft" || k === "ArrowDown") d = -1;
+      else if (k === "PageUp") d = 10;
+      else if (k === "PageDown") d = -10;
+      else if (k === "Home"){ set(0); e.preventDefault(); return; }
+      else if (k === "End"){ set(100); e.preventDefault(); return; }
+      if (d){ set(value + d); e.preventDefault(); }
+    });
+
+    wrap.appendChild(svg);
+    wrap.appendChild(bandP);
+    wrap.appendChild(hintP);
+    screen.appendChild(wrap);
+
+    var acts = el("div","actions");
+    acts.style.justifyContent = "center";
+    var cont = el("button","btn btn-primary","Lock it in");
+    cont.addEventListener("click", function(){ set(value); next(); });
+    acts.appendChild(cont);
+    acts.appendChild(backLink());
+    screen.appendChild(acts);
+
+    paint();
+  }
+
+  function renderText(step){
+    var qPos = QUESTION_INDEXES.indexOf(index);
+    screen.appendChild(head(step, qPos));
+
+    var ta = document.createElement("textarea");
+    ta.className = "write";
+    ta.id = "write-" + step.id;
+    ta.placeholder = step.ph;
+    ta.rows = 5;
+    ta.value = answers[step.id] || "";
+    ta.setAttribute("aria-label", step.q.replace(/<[^>]+>/g,""));
+
+    var count = el("p","count","");
+    var cont = el("button","btn btn-primary","Next");
+
+    function sync(){
+      var n = ta.value.trim().length;
+      count.textContent = n ? n + " characters, all of them yours" : "say as much or as little as you like";
+      cont.textContent = n ? "Next" : "Skip this one";
+      cont.className = n ? "btn btn-primary" : "btn btn-ghost";
+    }
+    ta.addEventListener("input", function(){ answers[step.id] = ta.value; save(); sync(); });
+    sync();
+
+    cont.addEventListener("click", next);
+
+    screen.appendChild(ta);
+    screen.appendChild(count);
+    var acts = el("div","actions");
+    acts.appendChild(cont);
+    acts.appendChild(backLink());
+    screen.appendChild(acts);
+  }
+
+  function renderMulti(step){
+    var qPos = QUESTION_INDEXES.indexOf(index);
+    screen.appendChild(head(step, qPos));
+
+    var picked = (answers[step.id] || []).slice();
+    var grid = el("div","grid");
+    var hintP = el("p","hint","");
+    hintP.style.marginTop = "16px";
+    var cont = el("button","btn btn-primary","Next");
+
+    function sync(){
+      var full = picked.length >= step.max;
+      grid.querySelectorAll(".chip").forEach(function(c){
+        var on = picked.indexOf(c.dataset.id) > -1;
+        c.setAttribute("aria-pressed", on ? "true" : "false");
+        c.classList.toggle("locked", full && !on);
+      });
+      hintP.textContent = picked.length === 0 ? "pick three"
+        : full ? "that's three. unpick one if you've changed your mind."
+        : picked.length + " of " + step.max + " — keep going";
+      cont.disabled = picked.length === 0;
+    }
+
+    step.opts.forEach(function(o){
+      var c = el("button","chip", o.label);
+      c.type = "button";
+      c.dataset.id = o.id;
+      c.addEventListener("click", function(){
+        var at = picked.indexOf(o.id);
+        if (at > -1) picked.splice(at,1);
+        else if (picked.length < step.max) picked.push(o.id);
+        answers[step.id] = picked.slice();
+        save(); sync();
+      });
+      grid.appendChild(c);
+    });
+
+    cont.addEventListener("click", next);
+    screen.appendChild(grid);
+    screen.appendChild(hintP);
+    var acts = el("div","actions");
+    acts.appendChild(cont);
+    acts.appendChild(backLink());
+    screen.appendChild(acts);
+    sync();
+  }
+
+  function renderNote(step){
+    var wrap = el("div","note-card");
+    wrap.appendChild(el("div","seal","♡"));
+    var body = el("p","note-body");
+    step.body.split("\n").forEach(function(line, i){
+      if (i) body.appendChild(document.createElement("br"));
+      body.appendChild(document.createTextNode(line));
+    });
+    wrap.appendChild(body);
+    wrap.appendChild(el("p","note-sig","— " + step.sig));
+    var acts = el("div","actions");
+    acts.style.justifyContent = "center";
+    var b = el("button","btn btn-ghost","Back to the questions");
+    b.addEventListener("click", next);
+    acts.appendChild(b);
+    wrap.appendChild(acts);
+    screen.appendChild(wrap);
+  }
+
+  function renderChosen(){
+    var h = el("div","q-head");
+    h.appendChild(el("p","q-num","Not a question"));
+    h.appendChild(html("h1","q-text","Here's the part that isn't a question."));
+    h.appendChild(html("p","q-sub","Conrad spent about ten summers not saying any of this out loud. I'm not doing that. So, for the record, and in writing:"));
+    screen.appendChild(h);
+
+    var lines = [
+      ["I choose you on the days you're lovely.", 0],
+      ["I choose you on the days you're not speaking to me.", 0],
+      ["I choose you tired, unwashed, furious, hungover, three hours into an argument about nothing.", 0],
+      ["I choose you when it's easy — which, honestly, it mostly is.", 0],
+      ["I choose you when it isn't. That's the part that counts.", 1],
+      ["Not “I ended up with you.” Chose. Present tense. Again this morning. Ella, out of everyone.", 1]
+    ];
+
+    var ul = el("ul","chosen-lines");
+    lines.forEach(function(l){
+      var li = el("li", l[1] ? "key" : "", l[0]);
+      ul.appendChild(li);
+    });
+    screen.appendChild(ul);
+
+    var react = el("p","react");
+    screen.appendChild(react);
+
+    var acts = el("div","actions");
+    var b = el("button","btn btn-primary","Choose me back");
+    b.addEventListener("click", function(){
+      b.disabled = true;
+      react.textContent = "yeah. that's what i thought. ♡";
+      react.classList.add("show");
+      var on = el("button","btn btn-ghost","One more question");
+      on.addEventListener("click", next);
+      acts.appendChild(on);
+      window.setTimeout(function(){ on.focus(); }, REDUCED ? 0 : 350);
+    });
+    acts.appendChild(b);
+    screen.appendChild(acts);
+
+    var items = ul.querySelectorAll("li");
+    if (REDUCED){
+      for (var i = 0; i < items.length; i++) items[i].classList.add("in");
+    } else {
+      items.forEach(function(li, i){
+        window.setTimeout(function(){ li.classList.add("in"); }, 180 + i*330);
+      });
+    }
+  }
+
+  function backLink(){
+    var b = el("button","btn-text","Back");
+    b.addEventListener("click", function(){ go(index - 1); });
+    return b;
+  }
+
+  /* ───────────────────────── the report ───────────────────────── */
+
+  function verdictOf(){
+    var romance = 0, chaos = 0;
+    var effect = num(answers.effect, 22), ass = num(answers.ass, 18), annoying = num(answers.annoying, 30);
+
+    var R = {
+      deb:    { look:35, conrad:33, beach:27, ask:25 },
+      jere:   { "after-you":30, never:23, "one-summer":9, immediately:0 },
+      room:   { follow:21, window:17, attic:11, kitchen:4 },
+      farts:  { me:7, both:4, you:0, neither:0 },
+      fisher: { conrad:12, guilty:9, jeremiah:0, steven:0 }
+    };
+    var X = {
+      deb:    { ask:10, beach:4, look:0, conrad:0 },
+      jere:   { immediately:30, "one-summer":15, never:6, "after-you":0 },
+      room:   { attic:17, kitchen:15, window:2, follow:0 },
+      farts:  { you:17, me:10, neither:9, both:4 },
+      fisher: { steven:30, jeremiah:23, guilty:5, conrad:0 }
+    };
+    ["deb","jere","room","farts","fisher"].forEach(function(k){
+      var v = answers[k];
+      if (v){ romance += (R[k][v] || 0); chaos += (X[k][v] || 0); }
+    });
+
+    var picks = answers.wants || [];
+    romance += Math.min(picks.length * 5, 15);
+    if (effect >= 70) romance += 8;
+    if (effect >= 95) chaos += 6;
+    if (annoying >= 70) chaos += 10;
+    if (ass >= 90) chaos += 9;
+
+    var written = ["knew","thing","scared","summer"].filter(function(k){ return trimmed(k).length > 2; }).length;
+    romance += written * 4;
+
+    romance = clamp(romance, 0, 100);
+    chaos = clamp(chaos, 0, 100);
+
+    var a;
+    if (chaos >= 48 && romance >= 58){
+      a = { title:"Conrad's Entire Problem",
+            verdict:"You're the reason the quiet one stops being quiet. Half of these answers were devastatingly romantic and the other half should be sealed by a court, and you didn't hesitate on a single one. That combination is the whole thing. That's what I signed up for." };
+    } else if (chaos >= 48){
+      a = { title:"Certified Cousins Beach Menace",
+            verdict:"Reading this back, you are a genuine hazard and I'd let you drive anyway. You answered the dumb ones faster than the serious ones, which tells me everything, and none of it puts me off. Menace. Mine. Both." };
+    } else if (romance >= 72){
+      a = { title:"The One I'd Choose Again",
+            verdict:"You answered like someone who isn't scared of being loved properly, which is rarer than people think. Every time there was an exit in these questions, you walked towards me instead. I noticed. I always notice." };
+    } else if (answers.room === "window" || picks.indexOf("real") > -1 || picks.indexOf("asleep") > -1){
+      a = { title:"Girl On The Window Seat",
+            verdict:"Quiet answers, the real kind. You asked to be noticed rather than performed at — to be asked the real question and waited for. Easiest ask in the world, bee. I'd watch you read in that window for an entire summer and call it a holiday." };
+    } else {
+      a = { title:"The Reason I Stopped Looking",
+            verdict:"Nothing in here surprised me and that's the nicest thing I can say about anyone. You're consistent, you're funny about it, and you were honest when it would've been easier not to be. I stopped looking a long time ago." };
+    }
+    a.romance = romance; a.chaos = chaos; a.written = written;
+    return a;
+  }
+
+  function section(label, node){
+    var s = el("section");
+    s.appendChild(el("h2","sec-label", label));
+    s.appendChild(node);
+    return s;
+  }
+
+  function renderSummary(){
+    var v = verdictOf();
+    var picks = answers.wants || [];
+
+    // hero
+    var hero = el("div","report-hero");
+    hero.appendChild(el("p","for-ella","The findings on · Ella"));
+    hero.appendChild(el("h1","archetype", v.title));
+    hero.appendChild(el("div","rule"));
+    hero.appendChild(el("p","verdict", v.verdict));
+    screen.appendChild(hero);
+
+    // readings
+    var readings = el("div","readings");
+    [
+      { k:"The Conrad effect", id:"effect",   d:22 },
+      { k:"My ass, officially", id:"ass",     d:18 },
+      { k:"How annoying I am", id:"annoying", d:30 }
+    ].forEach(function(r){
+      var val = num(answers[r.id], r.d);
+      var cell = el("div","reading");
+      cell.appendChild(el("span","reading-k", r.k));
+      var n = el("div","reading-v", String(val));
+      n.appendChild(el("small"," /100"));
+      cell.appendChild(n);
+      cell.appendChild(el("span","reading-n", band(r.id, val)));
+      readings.appendChild(cell);
+    });
+    screen.appendChild(section("The dials, as you left them", readings));
+
+    // her words
+    var quotes = el("div","quotes");
+    [
+      { id:"knew",   k:"When you knew it was me" },
+      { id:"thing",  k:"The thing you never told me you love" },
+      { id:"scared", k:"What you're a bit scared of" },
+      { id:"summer", k:"What next summer looks like" }
+    ].forEach(function(q){
+      var block = el("div");
+      block.appendChild(el("p","quote-k", q.k));
+      var txt = trimmed(q.id);
+      var bq = el("blockquote", txt ? "" : "skipped",
+        txt ? "“" + txt + "”" : "You left this one blank. That's allowed — ask me in person and I'll go first.");
+      block.appendChild(bq);
+      quotes.appendChild(block);
+    });
+    screen.appendChild(section("In your own words", quotes));
+
+    // promises
+    if (picks.length){
+      var list = el("ul","promises");
+      picks.forEach(function(id){
+        var w = WANTS.filter(function(x){ return x.id === id; })[0];
+        if (!w) return;
+        var li = el("li");
+        li.appendChild(el("span","tag","promised"));
+        var txt = el("div","p-text", w.promise);
+        txt.appendChild(el("span","p-want","you asked for: " + w.label.toLowerCase()));
+        li.appendChild(txt);
+        list.appendChild(li);
+      });
+      screen.appendChild(section("What you asked me for — and what you're getting", list));
+    }
+
+    // noted for the record
+    var filed = [];
+    if (answers.fisher === "jeremiah") filed.push("You said Jeremiah. In writing. On a page I built for you. We'll be discussing it.");
+    if (answers.fisher === "steven") filed.push("You picked Steven, which isn't a personality trait so much as a cry for help. Noted.");
+    if (answers.fisher === "conrad" || answers.fisher === "guilty") filed.push("Correct on the Fisher question, which legally makes me Conrad and you the entire reason he can't think straight.");
+    if (answers.jere === "immediately") filed.push("If I drown at Cousins, Jeremiah is apparently already idling in the driveway. I've made my peace with it.");
+    if (answers.jere === "after-you") filed.push("You said you'd come in after me. Don't. Stay on the beach. (But I'd have done the same, so I can't talk.)");
+    if (answers.farts === "you") filed.push("You blamed me for the farts. The record will show otherwise.");
+    if (answers.farts === "me") filed.push("You admitted to the farts unprompted, which is the single most romantic thing in this entire file.");
+    if (num(answers.ass, 18) >= 90) filed.push("You rated my ass " + num(answers.ass,18) + "/100. I'm having that printed.");
+    if (num(answers.ass, 18) <= 25) filed.push("You rated my ass " + num(answers.ass,18) + "/100, which is both rude and, I fear, admissible.");
+    if (num(answers.annoying, 30) >= 70) filed.push("You put me at " + num(answers.annoying,30) + "/100 for annoying and then kept going anyway. That's basically a vow.");
+    if (num(answers.effect, 22) >= 85) filed.push("The Conrad effect came in at " + num(answers.effect,22) + ". I'm going to look at you for slightly too long later and we'll see.");
+    if (answers.deb === "ask") filed.push("You want to be asked properly, in front of everyone. Noted, diarised, and genuinely looking forward to it.");
+
+    if (filed.length){
+      var ul = el("ul","filed");
+      filed.slice(0,5).forEach(function(line){ ul.appendChild(el("li", "", line)); });
+      screen.appendChild(section("Noted for the record", ul));
+    }
+
+    // letter
+    var letter = el("div","card letter");
+    letter.appendChild(el("p","salut","Ella —"));
+    letter.appendChild(el("p", "You just answered a question about my ass and a question about what frightens you, back to back, and didn't flinch at either one. That is, more or less, the entire reason it's you."));
+    letter.appendChild(el("p", "I'm not going to do the Conrad thing and spend ten summers almost saying it. So: I love you. Out loud, early, often, and badly if that's what's going. Not because you're easy to love — though you are, embarrassingly so — but because loving you is the most deliberate thing I do all day. Nobody talked me into it. I keep picking it. I'd pick it again right now."));
+    letter.appendChild(el("p", "Whatever you wrote up there, I want to hear you say it. Come and find me, put this in front of me, and watch my face while you pretend you're not watching my face."));
+    letter.appendChild(el("p","ily","I love you, hanbee."));
+    letter.appendChild(el("p","sign","— Tiago"));
+    screen.appendChild(letter);
+
+    // foot
+    var foot = el("div","report-foot");
+    foot.appendChild(el("div","rule"));
+    foot.appendChild(el("p","Made for Ella by Tiago · Cousins Beach · ∞"));
+    var acts = el("div","actions");
+    acts.style.justifyContent = "center";
+    var again = el("button","btn btn-ghost","Start again");
+    again.addEventListener("click", function(){ wipe(); answers = {}; go(0); });
+    acts.appendChild(again);
+    var reread = el("button","btn-text","Re-read the choosing bit");
+    reread.addEventListener("click", function(){
+      for (var i = 0; i < STEPS.length; i++) if (STEPS[i].type === "chosen"){ go(i); return; }
+    });
+    acts.appendChild(reread);
+    foot.appendChild(acts);
+    screen.appendChild(foot);
+  }
+
+  /* ───────────────────────── boot ───────────────────────── */
+
+  buildLights();
+  function start(state){
+    if (state && state.answers) answers = state.answers;
+    index = (state && typeof state.index === "number") ? state.index : 0;
+    render();
+  }
+  if (window.claude && window.claude.hot){
+    try { window.claude.hot.snapshot(function(){ return { answers: answers, index: index }; }); } catch(e){}
+  }
+  if (window.claude && window.claude.hot && window.claude.hot.ready) window.claude.hot.ready(start);
+  else start((window.claude && window.claude.hot && window.claude.hot.data) || {});
+})();
+</script>
+</body>
+</html>
