@@ -13,7 +13,7 @@ Open `index.html` in a browser. That's the whole thing.
 
 1. Push this repo to GitHub.
 2. **Settings → Pages → Source: Deploy from a branch**, branch `main`, folder `/ (root)`.
-3. Wait a minute, then it's live at `https://<username>.github.io/ella-questions/`.
+3. Wait a minute, then it's live at `https://<username>.github.io/cousins/`.
 
 The page carries `<meta name="robots" content="noindex, nofollow">` so search engines skip
 it. Anyone with the link can still open it — GitHub Pages sites are public.
